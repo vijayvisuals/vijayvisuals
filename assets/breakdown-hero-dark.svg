@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Vijay Pandey — Compositor. A visual-effects shot breakdown: a city with one tower per day of the last year, as tall as that day was busy, rendered as wireframe, clay, normals and depth passes, then the final beauty pass at sunset, with the name as the title.">
+<style>
+.ext{animation:ext 0.5s cubic-bezier(0.16, 1, 0.3, 1) both}
+.hold{animation-name:show;animation-timing-function:step-end;animation-fill-mode:both}
+.wipe{transform-box:fill-box;transform-origin:left center;animation-name:wipe;animation-timing-function:cubic-bezier(0.65, 0, 0.35, 1);animation-fill-mode:both;animation-duration:0.45s}
+/* no fill: the bar is invisible before and after its sweep */
+.bar{animation-name:bar;animation-timing-function:cubic-bezier(0.65, 0, 0.35, 1)}
+.tabOn{animation-name:tabOn;animation-timing-function:step-end;animation-fill-mode:forwards}
+.tabWait{animation:tabWait step-end both}
+.uline{animation:uline 4.724s both}
+.play{animation:play 1.644s cubic-bezier(.4,0,.2,1) 0.45s both}
+.roll{animation:roll 1.644s cubic-bezier(.4,0,.2,1) 0.45s both}
+.boot{animation:fade .6s ease-out .1s both}
+.flare{transform-origin:600px 272px;animation:flare 1.8s cubic-bezier(0.16, 1, 0.3, 1) 4.874s both}
+.draw{stroke-dasharray:700;animation:draw 1.7s cubic-bezier(.5,0,.3,1) .5s both}
+.glint{animation:glint 1.5s cubic-bezier(.5,0,.3,1) 5.824s both}
+.rise{animation:rise .9s cubic-bezier(0.16, 1, 0.3, 1) both}
+.kick{animation:rise .9s cubic-bezier(0.16, 1, 0.3, 1) 5.4239999999999995s both}
+.late{animation:fade 1s ease-out 5.074s both}
+.pulse{animation-name:pulse;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+.drift{animation-name:drift;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+.a{fill:var(--a)}.b{fill:var(--b)}.t{fill:var(--t)}.f{fill:var(--f)}
+.l{fill:none;stroke:var(--l,none);stroke-width:.6}
+.n{fill:none;stroke:var(--n,none)}
+.r{fill:none;stroke:var(--r,none);stroke-width:1.1;stroke-linecap:round}
+.s{fill:none;stroke:var(--s,none);stroke-linecap:round}
+@keyframes ext{from{transform:scaleY(0)}}
+@keyframes show{from{opacity:1}}
+@keyframes wipe{from{transform:scaleX(0)}}
+@keyframes bar{from{transform:translateX(-1176px);opacity:1}88%{opacity:1}}
+@keyframes tabOn{from{fill:#c8a96e}}
+@keyframes tabWait{from{fill:#8a8a82}}
+@keyframes uline{0%,49.27%{transform:translateX(-230px)}52.27%,64.28999999999999%{transform:translateX(-180px)}67.28999999999999%,79.32000000000001%{transform:translateX(-127px)}82.32000000000001%,97%{transform:translateX(-62px)}}
+@keyframes play{from{transform:translateX(-1056px)}}
+@keyframes roll{from{transform:translateY(0)}}
+@keyframes fade{from{opacity:0}}
+@keyframes flare{from{opacity:0;transform:scaleX(.2)}}
+@keyframes draw{from{stroke-dashoffset:700}}
+@keyframes glint{from{transform:translateX(-899.8px)}}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,0)}}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }</style>
+<defs>
+  <clipPath id="frame"><rect width="1200" height="600" rx="16"/></clipPath>
+  <clipPath id="viewer"><rect x="12" y="40" width="1176" height="492"/></clipPath>
+  <clipPath id="wp0"><rect class="wipe" style="animation-delay:2.244s" x="12" y="40" width="1176" height="492"/></clipPath><clipPath id="wp1"><rect class="wipe" style="animation-delay:2.9539999999999997s" x="12" y="40" width="1176" height="492"/></clipPath><clipPath id="wp2"><rect class="wipe" style="animation-delay:3.6639999999999997s" x="12" y="40" width="1176" height="492"/></clipPath><clipPath id="wp3"><rect class="wipe" style="animation-delay:4.374s;animation-duration:0.7s" x="12" y="40" width="1176" height="492"/></clipPath>
+  <linearGradient id="wireBg" x1="0" y1="40" x2="0" y2="532" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d1015"/><stop offset="1" stop-color="#0a0c10"/></linearGradient>
+  <linearGradient id="fadeGrad" x1="0" y1="272" x2="0" y2="342" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff"/></linearGradient>
+  <mask id="wireFade" maskUnits="userSpaceOnUse" x="12" y="40" width="1176" height="492"><rect x="12" y="40" width="1176" height="492" fill="url(#fadeGrad)"/></mask>
+  <linearGradient id="claySky" x1="0" y1="40" x2="0" y2="272" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2c2e33"/><stop offset="1" stop-color="#55585e"/></linearGradient>
+  <linearGradient id="clayGround" x1="0" y1="272" x2="0" y2="532" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a7d83"/><stop offset="1" stop-color="#5d6066"/></linearGradient>
+  <linearGradient id="depthGround" x1="0" y1="272" x2="0" y2="532" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#000000"/><stop offset="0.02" stop-color="#0a0a0a"/><stop offset="0.05" stop-color="#0a0a0a"/><stop offset="0.1" stop-color="#0a0a0a"/><stop offset="0.2" stop-color="#656565"/><stop offset="0.35" stop-color="#aaaaaa"/><stop offset="0.55" stop-color="#d1d1d1"/><stop offset="0.8" stop-color="#e7e7e7"/><stop offset="1" stop-color="#f1f1f1"/></linearGradient>
+  <linearGradient id="sky" x1="0" y1="40" x2="0" y2="272" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#05060a"/><stop offset="0.35" stop-color="#0d1220"/><stop offset="0.62" stop-color="#2a2433"/><stop offset="0.86" stop-color="#7a5634"/><stop offset="1" stop-color="#e2b46e"/></linearGradient>
+  <linearGradient id="street" x1="0" y1="272" x2="0" y2="532" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b88a52"/><stop offset=".25" stop-color="#59442c"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="272" x2="0" y2="532" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c99a5e"/><stop offset=".18" stop-color="#3a2c22"/><stop offset="1" stop-color="#0b0c10"/></linearGradient>
+  <radialGradient id="sunGlow"><stop offset="0" stop-color="#f0c070" stop-opacity="0.75"/><stop offset=".3" stop-color="#f0c070" stop-opacity="0.25"/><stop offset="1" stop-color="#f0c070" stop-opacity="0"/></radialGradient>
+  <radialGradient id="sunPool"><stop offset="0" stop-color="#fff1cf" stop-opacity="0.55"/><stop offset="1" stop-color="#fff1cf" stop-opacity="0"/></radialGradient>
+  <radialGradient id="beacon"><stop offset="0" stop-color="#ff4a3d" stop-opacity=".7"/><stop offset="1" stop-color="#ff4a3d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="streak"><stop offset="0" stop-color="#4a9eff" stop-opacity="0"/><stop offset=".5" stop-color="#4a9eff"/><stop offset="1" stop-color="#4a9eff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="streakCore"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="barGlow"><stop offset="0" stop-color="#c8a96e" stop-opacity="0"/><stop offset="1" stop-color="#c8a96e" stop-opacity=".22"/></linearGradient>
+  <linearGradient id="glintGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity="0.9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <text id="nm" x="280.1" y="170" textLength="639.8" lengthAdjust="spacingAndGlyphs" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-size="62" letter-spacing="9.9">VIJAY PANDEY</text>
+  <clipPath id="nmClip"><use xlink:href="#nm"/></clipPath>
+  <g id="r19"><path class="b" d="M621.9 300.6L621.5 300.1V310.4L621.9 311Z"/><path class="t" d="M621.9 300.6H637.3L636.6 300.1H621.5ZM590.5 300.6H609.5L609.3 300.1H590.7Z"/><path class="f" d="M621.9 311V300.6H637.3V311ZM590.5 311V300.6H609.5V311Z"/><path class="r" d="M621.5 300.1H636.6M590.7 300.1H609.3"/><path class="s" d="M496 311.2h0M525.7 311.2h0M555.4 311.2h0M585.1 311.2h0M614.9 311.2h0M644.6 311.2h0M674.3 311.2h0M704 311.2h0" stroke-width="1.2"/></g><g id="r24"><path class="b" d="M693.3 304.9L691.4 304.3V316.1L693.3 317Z"/><path class="t" d="M693.3 304.9H711.2L709 304.3H691.4Z"/><path class="f" d="M693.3 317V304.9H711.2V317Z"/><path class="r" d="M691.4 304.3H709"/><path class="s" d="M480.1 317.2h0M514.4 317.2h0M548.6 317.2h0M582.9 317.2h0M617.1 317.2h0M651.4 317.2h0M685.6 317.2h0M719.9 317.2h0" stroke-width="1.2"/></g><g id="r26"><path class="b" d="M662.6 307.1L661.3 306.3V318.9L662.6 319.9Z"/><path class="t" d="M662.6 307.1H682.5L680.8 306.3H661.3Z"/><path class="f" d="M662.6 319.9V307.1H682.5V319.9Z"/><path class="r" d="M661.3 306.3H680.8"/><path class="s" d="M472.3 320.2h0M508.8 320.2h0M545.3 320.2h0M581.8 320.2h0M618.2 320.2h0M654.7 320.2h0M691.2 320.2h0M727.7 320.2h0" stroke-width="1.2"/></g><g id="r27"><path class="b" d="M662.9 289L661.5 288.6V320.4L662.9 321.5Z"/><path class="t" d="M662.9 289H687.2L685.2 288.6H661.5Z"/><path class="f" d="M662.9 321.5V289H687.2V321.5Z"/><path class="r" d="M661.5 288.6H685.2"/><path class="s" d="M468 321.8h0M505.7 321.8h0M543.4 321.8h0M581.1 321.8h0M618.9 321.8h0M656.6 321.8h0M694.3 321.8h0M732 321.8h0" stroke-width="1.2"/></g><g id="r36"><path class="b" d="M744.5 289.1L739.9 288.5V340.6L744.5 342.9Z"/><path class="t" d="M744.5 289.1H777.7L772.1 288.5H739.9Z"/><path class="f" d="M744.5 342.9V289.1H777.7V342.9Z"/><path class="r" d="M739.9 288.5H772.1"/><path class="s" d="M410.6 343.4h0M464.7 343.4h0M518.8 343.4h0M572.9 343.4h0M627.1 343.4h0M681.2 343.4h0M735.3 343.4h0M789.4 343.4h0" stroke-width="1.2"/></g><g id="r52"><path class="b" d="M754.7 460.8L735.7 437.6V538.9L754.7 576.2Z"/><path class="t" d="M754.7 460.8H906.2L868.6 437.6H735.7ZM537.9 460.8H662.1L654.5 437.6H545.5Z"/><path class="f" d="M754.7 576.2V460.8H906.2V576.2ZM537.9 576.2V460.8H662.1V576.2Z"/><path class="l" d="M754.7 558.9H906.2M754.7 541.6H906.2M754.7 524.3H906.2M754.7 507.1H906.2M754.7 489.8H906.2M537.9 558.9H662.1M537.9 541.6H662.1M537.9 524.3H662.1M537.9 507.1H662.1M537.9 489.8H662.1"/><path class="n" d="M816.3 551.1h9.5M759.5 533.9h9.5M816.3 533.9h9.5M854.1 533.9h9.5M797.3 516.6h9.5M835.2 516.6h9.5M759.5 499.3h9.5M873 499.3h9.5M816.3 482h9.5M625.9 551.1h10.4M625.9 533.9h10.4M563.8 499.3h10.4" stroke-width="1.9"/><path class="r" d="M735.7 437.6H868.6M545.5 437.6H654.5"/></g>
+  <clipPath id="fc"><rect x="1148.7" y="14.9" width="6.8" height="12.5"/><rect x="1155.5" y="14.9" width="6.8" height="12.5"/><rect x="1162.4" y="14.9" width="6.8" height="12.5"/><rect x="1169.2" y="14.9" width="6.8" height="12.5"/></clipPath><text id="fd" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#f0ede8"><tspan x="0" y="0">0</tspan><tspan x="0" y="14.3">1</tspan><tspan x="0" y="28.6">2</tspan><tspan x="0" y="42.9">3</tspan><tspan x="0" y="57.2">4</tspan><tspan x="0" y="71.5">5</tspan><tspan x="0" y="85.8">6</tspan><tspan x="0" y="100.1">7</tspan><tspan x="0" y="114.4">8</tspan><tspan x="0" y="128.7">9</tspan><tspan x="0" y="143">0</tspan><tspan x="0" y="157.3">1</tspan><tspan x="0" y="171.6">2</tspan><tspan x="0" y="185.9">3</tspan><tspan x="0" y="200.2">4</tspan><tspan x="0" y="214.5">5</tspan><tspan x="0" y="228.8">6</tspan><tspan x="0" y="243.1">7</tspan><tspan x="0" y="257.4">8</tspan><tspan x="0" y="271.7">9</tspan><tspan x="0" y="286">0</tspan><tspan x="0" y="300.3">1</tspan><tspan x="0" y="314.6">2</tspan><tspan x="0" y="328.9">3</tspan><tspan x="0" y="343.2">4</tspan><tspan x="0" y="357.5">5</tspan><tspan x="0" y="371.8">6</tspan><tspan x="0" y="386.1">7</tspan><tspan x="0" y="400.4">8</tspan><tspan x="0" y="414.7">9</tspan><tspan x="0" y="429">0</tspan><tspan x="0" y="443.3">1</tspan><tspan x="0" y="457.6">2</tspan><tspan x="0" y="471.9">3</tspan><tspan x="0" y="486.2">4</tspan><tspan x="0" y="500.5">5</tspan><tspan x="0" y="514.8">6</tspan><tspan x="0" y="529.1">7</tspan><tspan x="0" y="543.4">8</tspan><tspan x="0" y="557.7">9</tspan></text>
+</defs>
+<g clip-path="url(#frame)">
+  <rect width="1200" height="600" fill="#0a0a0a"/>
+  <g clip-path="url(#viewer)">
+    <g class="hold" style="animation-duration:2.6940000000000004s" opacity="0">
+<rect x="12" y="40" width="1176" height="492" fill="url(#wireBg)"/>
+<g mask="url(#wireFade)"><path d="M-6633.3 888L455.3 284.3M-6166.7 888L464.7 284.3M-5700 888L474 284.3M-5233.3 888L483.3 284.3M-4766.7 888L492.7 284.3M-4300 888L502 284.3M-3833.3 888L511.3 284.3M-3366.7 888L520.7 284.3M-2900 888L530 284.3M-2433.3 888L539.3 284.3M-1966.7 888L548.7 284.3M-1500 888L558 284.3M-1033.3 888L567.3 284.3M-566.7 888L576.7 284.3M-100 888L586 284.3M366.7 888L595.3 284.3M833.3 888L604.7 284.3M1300 888L614 284.3M1766.7 888L623.3 284.3M2233.3 888L632.7 284.3M2700 888L642 284.3M3166.7 888L651.3 284.3M3633.3 888L660.7 284.3M4100 888L670 284.3M4566.7 888L679.3 284.3M5033.3 888L688.7 284.3M5500 888L698 284.3M5966.7 888L707.3 284.3M6433.3 888L716.7 284.3M6900 888L726 284.3M7366.7 888L735.3 284.3M7833.3 888L744.7 284.3M8300 888L754 284.3M12 298.1H1188M12 298.5H1188M12 299H1188M12 300.1H1188M12 300.6H1188M12 301.2H1188M12 302.4H1188M12 303H1188M12 303.7H1188M12 305.1H1188M12 305.8H1188M12 306.6H1188M12 308.3H1188M12 309.2H1188M12 310.2H1188M12 312.3H1188M12 313.4H1188M12 314.6H1188M12 317.2H1188M12 318.6H1188M12 320.2H1188M12 323.5H1188M12 325.4H1188M12 327.4H1188M12 331.9H1188M12 334.4H1188M12 337.1H1188M12 343.4H1188M12 347H1188M12 351.1H1188M12 360.5H1188M12 366.2H1188M12 372.6H1188M12 388.4H1188M12 398.4H1188M12 410.2H1188M12 441.9H1188M12 464H1188M12 492.7H1188" stroke="#2a3644" stroke-width=".8" fill="none"/>
+<path d="M12 297.6H1188M12 299.5H1188M12 301.7H1188M12 304.4H1188M12 307.5H1188M12 311.2H1188M12 315.9H1188M12 321.8H1188M12 329.5H1188M12 340.1H1188M12 355.5H1188M12 379.9H1188M12 424.4H1188M12 531.4H1188" stroke="#3c4c60" stroke-width=".9" fill="none"/></g>
+<g style="--a:#0a0c10;--b:#0a0c10;--t:#0a0c10;--f:#0a0c10" stroke="#6fb3ff" stroke-width=".7" stroke-linejoin="round" mask="url(#wireFade)"><use xlink:href="#r19" class="ext" style="transform-origin:600px 311px;animation-delay:0.868s"/><use xlink:href="#r24" class="ext" style="transform-origin:600px 317px;animation-delay:0.978s"/><use xlink:href="#r26" class="ext" style="transform-origin:600px 319.9px;animation-delay:1.022s"/><use xlink:href="#r27" class="ext" style="transform-origin:600px 321.5px;animation-delay:1.044s"/><use xlink:href="#r36" class="ext" style="transform-origin:600px 342.9px;animation-delay:1.242s"/><use xlink:href="#r52" class="ext" style="transform-origin:600px 576.2px;animation-delay:1.594s"/></g>
+<use xlink:href="#nm" class="draw" fill="none" stroke="#6fb3ff" stroke-width="1.1"/>
+<g fill="none" stroke="#6fb3ff" stroke-opacity=".35" stroke-dasharray="4 5"><rect x="70.80000000000001" y="64.6" width="1058.4" height="442.8"/><rect x="129.60000000000002" y="89.2" width="940.8000000000001" height="393.6"/></g>
+<text x="30" y="64" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" letter-spacing="2" fill="#6fb3ff">WIRE<tspan font-weight="400" fill-opacity=".7">  persp · 35 mm</tspan></text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" font-weight="700">
+<path d="M56 502h22" stroke="#e5484d" stroke-width="1.6"/><text x="82" y="505" fill="#e5484d">X</text>
+<path d="M56 502v-22" stroke="#46a758" stroke-width="1.6"/><text x="53" y="476" fill="#46a758">Y</text>
+<path d="M56 502l-12 10" stroke="#4a9eff" stroke-width="1.6"/><text x="34" y="518" fill="#4a9eff">Z</text>
+<circle cx="56" cy="502" r="2.2" fill="#8a8a82"/></g>
+</g>
+    <g class="hold" style="animation-duration:3.404s" opacity="0"><g clip-path="url(#wp0)">
+<rect x="12" y="40" width="1176" height="232" fill="url(#claySky)"/>
+<rect x="12" y="272" width="1176" height="260" fill="url(#clayGround)"/>
+<g style="--a:#6a6a67;--b:#b9b8b3;--t:#e2e1dc;--f:#8b8a86"><use xlink:href="#r19"/><use xlink:href="#r24"/><use xlink:href="#r26"/><use xlink:href="#r27"/><use xlink:href="#r36"/><use xlink:href="#r52"/></g>
+<use xlink:href="#nm" fill="#000000" opacity=".22" transform="translate(0 3)"/><use xlink:href="#nm" fill="#e2e1dc"/>
+<text x="30" y="64" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" letter-spacing="2" fill="#f0ede8">CLAY<tspan font-weight="400" fill-opacity=".7">  grey shader · 1 key</tspan></text>
+</g></g>
+    <g class="hold" style="animation-duration:4.114s" opacity="0"><g clip-path="url(#wp1)">
+<rect x="12" y="40" width="1176" height="492" fill="#000000"/>
+<rect x="12" y="272" width="1176" height="260" fill="#80ff80"/>
+<g style="--a:#ff8080;--b:#008080;--t:#80ff80;--f:#8080ff"><use xlink:href="#r19"/><use xlink:href="#r24"/><use xlink:href="#r26"/><use xlink:href="#r27"/><use xlink:href="#r36"/><use xlink:href="#r52"/></g>
+<use xlink:href="#nm" fill="#8080ff"/>
+<text x="30" y="64" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" letter-spacing="2" fill="#ffffff">NORMALS<tspan font-weight="400" fill-opacity=".7">  world · N.xyz</tspan></text>
+</g></g>
+    <g class="hold" style="animation-duration:5.074s" opacity="0"><g clip-path="url(#wp2)">
+<rect x="12" y="40" width="1176" height="492" fill="#000000"/>
+<rect x="12" y="272" width="1176" height="260" fill="url(#depthGround)"/>
+<use xlink:href="#r19" style="--a:#393939;--b:#393939;--t:#393939;--f:#393939"/><use xlink:href="#r24" style="--a:#4e4e4e;--b:#4e4e4e;--t:#4e4e4e;--f:#4e4e4e"/><use xlink:href="#r26" style="--a:#585858;--b:#585858;--t:#585858;--f:#585858"/><use xlink:href="#r27" style="--a:#5c5c5c;--b:#5c5c5c;--t:#5c5c5c;--f:#5c5c5c"/><use xlink:href="#r36" style="--a:#8c8c8c;--b:#8c8c8c;--t:#8c8c8c;--f:#8c8c8c"/><use xlink:href="#r52" style="--a:#f5f5f5;--b:#f5f5f5;--t:#f5f5f5;--f:#f5f5f5"/>
+<use xlink:href="#nm" fill="#5c5c5c"/>
+<text x="30" y="64" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" letter-spacing="2" fill="#ffffff">DEPTH<tspan font-weight="400" fill-opacity=".7">  Z · normalised</tspan></text>
+</g></g>
+    <g clip-path="url(#wp3)">
+<rect x="12" y="40" width="1176" height="232" fill="url(#sky)"/>
+<ellipse cx="600" cy="272" rx="520" ry="150" fill="url(#sunGlow)"/>
+<g fill="#e8b878" opacity="0.22"><g class="drift" style="animation-duration:23s"><ellipse cx="616" cy="222" rx="122" ry="5.9" opacity="0.812"/><ellipse cx="471" cy="126" rx="265" ry="2.2" opacity="0.494"/><ellipse cx="798" cy="140" rx="190" ry="5" opacity="0.451"/><ellipse cx="180" cy="243" rx="143" ry="4.2" opacity="0.963"/><ellipse cx="184" cy="173" rx="292" ry="2" opacity="0.762"/><ellipse cx="289" cy="242" rx="274" ry="2.9" opacity="0.94"/><ellipse cx="545" cy="220" rx="144" ry="3.6" opacity="0.569"/></g></g>
+<circle cx="600" cy="272" r="15" fill="#fff1cf"/>
+<rect x="12" y="272" width="1176" height="260" fill="url(#water)"/>
+<ellipse cx="600" cy="274" rx="420" ry="34" fill="url(#sunPool)"/>
+<g class="drift" style="animation-duration:9s;animation-direction:reverse"><path d="M371.5 295.4h16.3M59.4 311.3h25.9M196.7 312.8h14M5.1 355.4h30.4M946.6 290.4h18.3M234.6 298.1h21.4M724 298.9h29.4M-651.7 587h54.8M20.6 322.7h36.1M-588.8 575.6h96.9M-47.3 365.5h39.5M118 332h30.5M1743.9 616.7h75.5M121.1 316.2h20.6M447.4 290.8h25.8M18.5 316.9h32.7M163.8 328.3h34.8M178.9 341.1h30M1125.4 292.8h26.8M994.2 297.5h27.9M1065.5 409.3h27.4M1919.4 592.8h112.7M1571.7 516.1h47.8M429.8 318.7h14.4M-1036.2 698.9h100M891 343.7h20.1M312.6 315.3h15.8M45.9 298h16.8M289.7 336.5h24.2M1362.9 422.6h64.3M-529.6 538.1h60.1M49.4 296.9h16M648.5 290.8h14.2M338.1 311.8h29.7M1373.4 404.3h59.2M1273.4 406.1h58.5M1146.4 297.4h20.6M986.1 329.9h34.8M1029.1 296.7h24.9M331.9 305.1h27.1M-339.7 572.6h70.7M1006.3 335.5h38.8M989.5 330.3h18.4M-1050.7 668.1h127.2M1532.1 459.2h64.5M1071.6 299.6h12.4M909.5 298.9h18.9M478 294.1h12.7M161.8 299.8h22.4M1401.5 515.8h81.8M834.3 304.8h22.5M168.3 293.8h24.9M688.6 295.4h17.8M653.5 296.2h16M963.5 291.8h21.4M686.9 292.7h21.5M191.7 292.7h28M1103.8 392.9h46.3M146 326.7h15.5M258 295.9h17.6M870.5 290.1h21.5M142.3 293.2h23M1490.1 562.8h50M172.8 306.3h32.6M893.2 331.9h29M-179.2 396.5h32.8M1050.8 292h18.1M904 314.6h28.3M177.5 325.5h22.9M920.5 359.9h32.6" stroke="#f0c070" stroke-opacity="0.28" stroke-width="1.1" stroke-linecap="round"/></g>
+<path d="M-1089.3 888L530.1 297.5H669.9L2289.3 888Z" fill="url(#street)"/>
+<path d="M-1089.3 888L530.1 297.5H669.9L2289.3 888" fill="none" stroke="#ffd894" stroke-opacity="0.35" stroke-width="1"/>
+<use xlink:href="#r19" style="--a:#8f6d44;--b:#916e45;--t:#a57e4c;--f:#8d6b42;--l:#5c462b;--n:#ffcf7a;--r:#d4a96c;--s:#ffc46b"/><use xlink:href="#r24" style="--a:#896842;--b:#8a6a43;--t:#a17c4b;--f:#87663f;--l:#584229;--n:#ffcf7a;--r:#d7ac6e;--s:#ffc46b"/><use xlink:href="#r26" style="--a:#866641;--b:#876742;--t:#9f7a4a;--f:#83643e;--l:#554128;--n:#ffcf7a;--r:#d8ad70;--s:#ffc46b"/><use xlink:href="#r27" style="--a:#846540;--b:#856641;--t:#9e7a4a;--f:#81623d;--l:#544028;--n:#ffcf7a;--r:#d8ae70;--s:#ffc46b"/><use xlink:href="#r36" style="--a:#6e5538;--b:#70573a;--t:#927146;--f:#6a5134;--l:#453522;--n:#ffcf7a;--r:#e0b677;--s:#ffc46b"/><use xlink:href="#r52" style="--a:#15161a;--b:#1a1a1e;--t:#5e4d34;--f:#0d0e11;--l:#08090b;--n:#ffcf7a;--r:#ffd894;--s:#ffc46b"/>
+<g transform="translate(756 287.5)"><g class="pulse" style="animation-duration:1.6s;animation-delay:-0s"><circle r="3" fill="url(#beacon)"/><circle r="0.7" fill="#ff4a3d"/></g></g>
+<use xlink:href="#nm" fill="#000000" opacity="0.35" transform="translate(0 2)"/><use xlink:href="#nm" fill="#f6f2ea"/>
+</g>
+    <g class="flare"><g class="pulse" style="animation-duration:5.5s">
+<ellipse cx="600" cy="272" rx="729.12" ry="7" fill="url(#streak)" opacity="0.75"/>
+<ellipse cx="600" cy="272" rx="399.84000000000003" ry="1.6" fill="url(#streakCore)"/>
+</g></g>
+    <g clip-path="url(#nmClip)"><path class="glint" d="M979.9 108h120l-60 80.6h-120z" fill="url(#glintGrad)"/></g>
+    <text class="kick" x="600" y="101.4" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" letter-spacing="3.6" fill="#c8a96e">VFX COMPOSITOR/DEVELOPER   ·   UTTAR PRADESH</text>
+    <text class="rise" style="animation-delay:5.624s" x="600" y="204" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-style="italic" font-size="18" fill="#f6f2ea" fill-opacity="0.82">Compositor</text>
+    <g class="bar" style="animation-delay:2.244s;animation-duration:0.45s" opacity="0">
+<rect x="1148" y="40" width="40" height="492" fill="url(#barGlow)"/>
+<path d="M1188 40V532" stroke="#c8a96e" stroke-width="1.6"/>
+<rect x="1114" y="50" width="68" height="18" rx="3" fill="#c8a96e"/>
+<text x="1148" y="62.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">CLAY</text>
+</g><g class="bar" style="animation-delay:2.9539999999999997s;animation-duration:0.45s" opacity="0">
+<rect x="1148" y="40" width="40" height="492" fill="url(#barGlow)"/>
+<path d="M1188 40V532" stroke="#c8a96e" stroke-width="1.6"/>
+<rect x="1114" y="50" width="68" height="18" rx="3" fill="#c8a96e"/>
+<text x="1148" y="62.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">NORMALS</text>
+</g><g class="bar" style="animation-delay:3.6639999999999997s;animation-duration:0.45s" opacity="0">
+<rect x="1148" y="40" width="40" height="492" fill="url(#barGlow)"/>
+<path d="M1188 40V532" stroke="#c8a96e" stroke-width="1.6"/>
+<rect x="1114" y="50" width="68" height="18" rx="3" fill="#c8a96e"/>
+<text x="1148" y="62.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">DEPTH</text>
+</g><g class="bar" style="animation-delay:4.374s;animation-duration:0.7s" opacity="0">
+<rect x="1148" y="40" width="40" height="492" fill="url(#barGlow)"/>
+<path d="M1188 40V532" stroke="#c8a96e" stroke-width="1.6"/>
+<rect x="1114" y="50" width="68" height="18" rx="3" fill="#c8a96e"/>
+<text x="1148" y="62.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">BEAUTY</text>
+</g>
+    <g class="late" fill="none" stroke="#c8a96e" stroke-width="1.4" stroke-opacity=".8">
+      <path d="M26 80v-26h26M1174 80v-26h-26M26 492v26h26M1174 492v26h-26"/>
+    </g>
+    <text class="late" x="1170" y="512" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#f0ede8" fill-opacity=".7">BEAUTY · FINAL · v008</text>
+  </g>
+  <g class="boot" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+    <rect width="1200" height="40" fill="#111111"/>
+    <path d="M0 39.5H1200M0 532.5H1200" stroke="#ffffff" stroke-opacity="0.08"/>
+    <rect x="24" y="14" width="12" height="12" rx="2" fill="none" stroke="#c8a96e" stroke-width="1.4"/><circle class="pulse" style="animation-duration:2s" cx="30" cy="20" r="2.4" fill="#c8a96e"/>
+    <text x="46" y="25" font-size="11" font-weight="700" letter-spacing="1.6" fill="#f0ede8">VIJAYVISUA_0100</text>
+    <text x="179" y="25" font-size="10" letter-spacing="1" fill="#8a8a82">comp_v008</text>
+    <g font-size="9.5" letter-spacing="1.6"><text class="tabOn" style="animation-delay:0s;animation-duration:2.469s" x="512" y="25" text-anchor="middle" fill="#8a8a82">WIRE</text><text class="tabOn" style="animation-delay:2.244s;animation-duration:0.935s" x="562" y="25" text-anchor="middle" fill="#8a8a82">CLAY</text><text class="tabOn" style="animation-delay:2.9539999999999997s;animation-duration:0.935s" x="615" y="25" text-anchor="middle" fill="#8a8a82">NORMALS</text><text class="tabOn" style="animation-delay:3.6639999999999997s;animation-duration:1.06s" x="680" y="25" text-anchor="middle" fill="#8a8a82">DEPTH</text><text class="tabWait" style="animation-duration:4.724s" x="742" y="25" text-anchor="middle" fill="#c8a96e">BEAUTY</text></g>
+    <rect class="uline" x="718" y="33" width="48" height="2" fill="#c8a96e"/>
+    <text x="1110" y="25" text-anchor="end" font-size="10" letter-spacing="1" fill="#8a8a82">2048×858 · 2.39 · 24 fps</text>
+    <text x="1128" y="25" text-anchor="end" font-size="9" letter-spacing="1" fill="#8a8a82">F</text>
+    <g clip-path="url(#fc)"><g class="roll" style="transform:translateY(0px)"><use xlink:href="#fd" x="1152.1" y="10.7"/></g></g><g clip-path="url(#fc)"><g class="roll" style="transform:translateY(-42.9px)"><use xlink:href="#fd" x="1159" y="25"/></g></g><g clip-path="url(#fc)"><g class="roll" style="transform:translateY(-514.8px)"><use xlink:href="#fd" x="1165.8" y="25"/></g></g><g clip-path="url(#fc)"><g class="roll" style="transform:translateY(-486.2px)"><use xlink:href="#fd" x="1172.6" y="10.7"/></g></g>
+  </g>
+  <g class="boot" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+    <path d="M452 566v-6.3M454.9 566v-6.3M562.3 566v-6.3M600 566v-6.3M620.3 566v-15.5M806 566v-17.9M1122.2 566v-8.9M1125.1 566v-8.9" stroke="#c8a96e" stroke-opacity="0.55" stroke-width="1.6"/>
+    <path d="M72 566.5H1128" stroke="#ffffff" stroke-opacity=".2"/>
+    <path d="M95.2 568v5M182.2 568v5M272.2 568v5M362.1 568v5M443.3 568v5M533.3 568v5M620.3 568v5M710.2 568v5M797.3 568v5M887.2 568v5M977.1 568v5M1064.2 568v5" stroke="#8a8a82" stroke-opacity=".6"/>
+    <g font-size="8" letter-spacing="1" fill="#8a8a82"><text x="98.2" y="582">NOV</text><text x="185.2" y="582">DEC</text><text x="275.2" y="582">JAN</text><text x="365.1" y="582">FEB</text><text x="446.3" y="582">MAR</text><text x="536.3" y="582">APR</text><text x="623.3" y="582">MAY</text><text x="713.2" y="582">JUN</text><text x="800.3" y="582">JUL</text><text x="890.2" y="582">AUG</text><text x="980.1" y="582">SEP</text><text x="1067.2" y="582">OCT</text></g>
+    <path d="M806 538l4 4l-4 4l-4 -4z" fill="#c8a96e"/><text x="814" y="545" text-anchor="start" font-size="8" letter-spacing="1" fill="#c8a96e">PEAK · 04 JUL · 8 CONTRIBUTIONS</text>
+    <text x="62" y="569" text-anchor="end" font-size="9" fill="#8a8a82">1001</text>
+    <text x="1138" y="569" font-size="9" fill="#8a8a82">1365</text>
+    <text x="72" y="594" font-size="8.5" letter-spacing="1.4" fill="#8a8a82">ONE FRAME PER DAY · 22 CONTRIBUTIONS · 8 ACTIVE DAYS</text>
+    <text x="1128" y="594" text-anchor="end" font-size="8.5" letter-spacing="1.4" fill="#8a8a82">ONE TOWER PER DAY · ONE ROW PER WEEK</text>
+    <g class="play"><path d="M1128 552V572" stroke="#f0ede8" stroke-width="1.4"/><path d="M1123 548h10v4l-5 5l-5 -5z" fill="#f0ede8"/></g>
+  </g>
+</g>
+<rect x="0.5" y="0.5" width="1199" height="599" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+</svg>
